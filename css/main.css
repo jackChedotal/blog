@@ -1,8 +1,38 @@
-/******************************************
- 
-			Default Styling
-		
-*******************************************/
+/*****/ 
+/*	CSS StyleSheet 
+/*	Written by Jack Chedotal
+/*
+/*	Contents
+/*	---------------
+/*	Reset Rules + General Styling
+/*	Header
+/*	Nav
+/*	Main Content
+/*	Footer
+/* 	Other Styling
+/*	Media Query - 768+1024
+/*	Media Query - 481px+767px
+/*	Media Query - 320px+480px
+/*
+/*
+/*	Colour Style
+/*	---------------
+/*	fff		- White
+/*	ccc 	- Light Grey
+/*	eee		- Lightest Grey 
+/*	222		- Dark grey
+/*	939798 	- Grey
+/*	408AD2 	- Blue (background) 
+/*	71A6D2	- Light Blue
+/*	2468FF	- Dark Blue
+/*
+/*
+/*****/
+
+
+/*****/
+/*  ~Reset Rules + General Styling
+/*****/
 
 body {
 	background:#408AD2;
@@ -31,12 +61,14 @@ hr {
 	margin-bottom: 5px;
 	background: #ccc;
 }
-.leftAlign{	float: left;
-	margin: 0 5px 0 0;}
-
-.rightAlign{ float: right;
-	margin: 0 0 0 5px;}
-
+.leftAlign{	
+	float: left;
+	margin: 0 5px 0 0;
+}
+.rightAlign{ 
+	float: right;
+	margin: 0 0 0 5px;
+}
 .centreAlign{
 	text-align: center;
 	display: block;
@@ -56,26 +88,28 @@ hr {
 	height: 85%;
 	margin-left: 6.5%;
 }
-#slider { overflow: hidden; max-width: 840px; height: auto; margin: 5px 0 0 0;}
-#slider img { width: 100%; height: auto;}
-
-#slider .slides {
-	display: block;
-	width: 6000px;
-	margin: 0;
-	padding: 0;
+#slider { 
+	overflow: hidden; 
+	max-width: 840px; 
+	height: auto; 
+	margin: 5px 0 0 0;
 }
-#slider .slide {
-	float: left;
-	list-style-type: none;
-	max-width: 840px;
+#slider img { 
+	width: 100%; 
 	height: auto;
 }
-/******************************************
- 
-			Desktop View & Main Styling 
-		
-*******************************************/
+	#slider .slides {
+		display: block;
+		width: 6000px;
+		margin: 0;
+		padding: 0;
+	}
+		#slider .slide {
+			float: left;
+			list-style-type: none;
+			max-width: 840px;
+			height: auto;
+		}
 #wrapper {
 	width: 70%;
 	max-width: 1200px;
@@ -86,9 +120,23 @@ hr {
 	margin-top: 1%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/*****/
+/*  ~Header
+/*****/		
+		
 header#header {
 	background: #fff;
+}		
+	header#header h1 {
+	margin: 0; 
+	padding: 0;
 }
+
+/*****/
+/*  ~Nav
+/*****/			
 
 nav{
 	background: #71A6D2;
@@ -101,27 +149,19 @@ nav li{
 	list-style-type:none;
 }
 	
-nav a,nav a:visited{
-	border-radius: 5px;
-	padding: 10px 20px 10px 20px;
-}
-	
-nav a:hover{
-	background: #2468FF;
-	text-decoration: none;
-	border-bottom: 3px solid #222;
-	color: #fff;
-	padding: 10px 20px 8px 20px;
-}
-section#mainContent {
-	background: #fff;
-	width: 70%;
-	max-width: 840px;
-	float: left;
-}
-section#mainContent header {
-	padding: 5px;
-}
+	nav a,nav a:visited{
+		border-radius: 5px;
+		padding: 10px 20px 10px 20px;
+	}
+		
+	nav a:hover{
+		background: #2468FF;
+		text-decoration: none;
+		border-bottom: 3px solid #222;
+		color: #fff;
+		padding: 10px 20px 8px 20px;
+	}
+
 aside#rightNav {
 	float: left;
 	width: 30%;
@@ -133,17 +173,35 @@ aside#rightNav h4{
 	text-align: center;
 	border-radius: 5px;
 }
-aside#rightNav ul{ list-style-type: none;}
-aside#rightNav li { padding: 3px 10px;}
-
-aside#rightNav li:hover{
-background: #939798;
-}
+	aside#rightNav ul{ list-style-type: none;}
+		aside#rightNav li { padding: 3px 10px;}
+		aside#rightNav li:hover{ background: #939798;}	
+		
 .rightNavRespImg {
 	width: 95%;
 	height: auto;
 	margin: 0 2.5%;
+}		
+
+
+/*****/
+/*  ~Main Content
+/*****/			
+
+section#mainContent {
+	background: #fff;
+	width: 70%;
+	max-width: 840px;
+	float: left;
 }
+section#mainContent header {
+	padding: 5px;
+}
+
+
+/*****/
+/*  ~Main Content
+/*****/
 
 #footerWrap {
 	width: 100%;
@@ -162,27 +220,38 @@ footer a , footer a:visited {
 	color: #fff; 
 	text-align: center; 
 }
-footer a:hover { 
-	color: #2468FF; 
-	text-decoration:none;
-}
+	footer a:hover { 
+		color: #2468FF; 
+		text-decoration:none;
+	}
 footer .footerColumn {
 	width: 30%;
 	margin: 0 3.3% 0 0;
 	float: left;
 	list-style-type: none;
 }
-footer .footerColumn li {
-	padding: 5px 0;
-	margin-left: 10px;
-}
-footer .footerColumn li:first-child {margin-left: 0;} /* used so that the heading on each list does not get indented*/
-footer h2 {
+footer #footer h2 {
 	border-bottom: 2px solid white;
 	font-weight: bold;
 	text-transform: uppercase;
 }
-/*Index News Article styling*/
+	footer .footerColumn li {
+		padding: 5px 0;
+		margin-left: 10px;
+	}
+	footer .footerColumn li:first-child {margin-left: 0;} /* used so that the heading on each list does not get indented*/
+
+	
+/*****/
+/*  ~Other Styling
+/*****/	
+		
+section h1 {
+	border-bottom: 2px dotted black;
+	width: 96%;
+	margin: 0 auto;
+	color: #333;
+}
 article.news { 
 	margin: 0 auto;
 	width: 96%;
@@ -193,49 +262,34 @@ article.news figure {
 	float: left;
 	width: 25%;
 	max-width: 200px;
+	padding: 0;
+	margin: 0;
 }
-article.news img {
-	margin: 5px 0;
-	height:auto;
-	width:100%;
-}
-article.news header {
-	float: left;
-}
-article.news header p {
-	font-size: 0.9em;
-}
+	article.news img {
+		margin: 5px 0;
+		padding: 0;
+		height:auto;
+		width:100%;
+	}
+article.news header { float: left;}
+	article.news header p { font-size: 0.9em;}
 article.news content {
 	width: 75%;
 	float: left;
-	}
+}
 article.news footer {
 	text-align: right;
 	margin: 0 0 10px 0;
 }
-article.news footer a, article.news footer a:visited {
-	background: #444;
-	border-radius: 5px;
-	padding: 5px;
-	text-align: center;
-	color: white;
-	text-decoration: none;
-}
-article.news footer a:hover {	
-	background: #2468FF;
-}
-section h1 {
-	border-bottom: 2px dotted black;
-	width: 96%;
-	margin: 0 auto;
-	color: #333;
-}
-/******************************************
- 
-			Desktop Content Styling 
-		
-*******************************************/
-
+	article.news footer a, article.news footer a:visited {
+		background: #222;
+		border-radius: 5px;
+		padding: 5px;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+	}
+	article.news footer a:hover { background: #2468FF;}
 .spoilAlert{
 	background: #FF7373;
 	border-radius: 5px;
@@ -245,59 +299,54 @@ section h1 {
 	margin-bottom: 5px;
 	cursor: pointer;
 }
-.spoilAlert h3 {
-	text-align: center;
-}
+.spoilAlert h3 { text-align: center;}
 
-/******************************************
- 
-			Media Query - 768+1024
 
-		
-*******************************************/
+/*****/
+/*  ~Media Query - 768+1024
+/*****/	
 
 @media (min-width: 768px) and (max-width: 1024px) {
 	
 	#wrapper { width: 90%;}
 	footer#footer { width: 90%;}
 	#slider { max-width: 840px;}
-	#slider .slide { max-width: 840px;}
+		#slider .slide { max-width: 840px;}
 }
 
 
-
-/******************************************
- 
-			Media Query - 481px+767px
-
-		
-*******************************************/
+/*****/
+/*  ~Media Query - 481px+767px
+/*****/	
 
 @media (min-width: 481px) and (max-width: 767px) {
 
 	#wrapper { width: 90%;}
 	
 	#navMenu { display: none;}
-	#navBtn {
-		display: block;
-		text-align: center;
-		cursor: pointer;
-	}	
-	#navBtn:before {
-		content: "Menu";
+		#navBtn {
+			display: block;
+			text-align: center;
+			cursor: pointer;
+		}	
+		#navBtn:before { content: "Menu";}
+		nav li{ display:block;}
+		nav a,nav a:visited{
+			border-radius: 0;
+			display: block;
+			width: 100%;
+			height: auto;
+		}	
+	section#mainContent {
+		width: 100%; 
+		float: none; 
+		padding-bottom: 5px;
 	}
-	nav li{
-		display:block;
-	}
-	nav a,nav a:visited{
-		border-radius: 0;
-		display: block;
-		width: 100%;
-		height: auto;
-	}	
-	section#mainContent {width: 100%; float: none; padding-bottom: 5px;}
 	aside#rightNav {width: 100%;} 
-	.rightBar { width: 50%; float: left;}
+	.rightBar { 
+		width: 50%; 
+		float: left;
+	}
 	footer .footerColumn {
 		width: 100%;
 		float: none;
@@ -305,12 +354,10 @@ section h1 {
 	#returnTop {float: none;}
 }
 
-/******************************************
- 
-			Media Query - 320px+480px
 
-		
-*******************************************/
+/*****/
+/*  ~Media Query - 320px+480px
+/*****/	
 
 @media (min-width: 0px) and (max-width: 480px) {
 	
@@ -322,23 +369,24 @@ section h1 {
 		text-align: center;
 		cursor: pointer;
 	}	
-	#navBtn:before {
-		content: "Menu";
+		#navBtn:before { content: "Menu";}
+		nav li{ display:block;}
+		nav a,nav a:visited{
+			border-radius: 0;
+			display: block;
+			width: 100%;
+			height: auto;
+		}	
+		
+	section#mainContent {
+		width: 100%; 
+		float: none;
+		padding-bottom: 5px;
 	}
-	
-	nav li{
-		display:block;
-	}
-	nav a,nav a:visited{
-		border-radius: 0;
-		display: block;
+	aside#rightNav {
+		float:none; 
 		width: 100%;
-		height: auto;
-	}	
-	
-	section#mainContent {width: 100%; float: none; padding-bottom: 5px;}
-	aside#rightNav {float:none; width: 100%;}
-	
+	}
 	article.news figure { 
 	float: left;
 	width: 80%;
@@ -347,9 +395,7 @@ section h1 {
 	max-width: none;
 	}
 	article.news content { width: 100%}
-	.spoilAlert{
-		width: 95%;
-	}
+	.spoilAlert{ width: 95%;}
 	footer .footerColumn {
 		width: 100%;
 		float: none;
